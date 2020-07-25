@@ -1,0 +1,30 @@
+.main-grid{
+    height: 100%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: [main-start content-start] repeat(12, 1fr) [content-end main-end];
+    grid-template-rows: [main-start header-start] 80px [header-end] 40px [content-start] auto [content-end footer-start] 80px [footer-end main-end];
+}
+
+.main-grid > * {
+    display: grid;
+    justify-items: center;
+}
+
+.main-grid > header{
+    grid-column: main;
+}
+
+
+.main-grid > content {
+    grid-area: content;
+}
+
+.main-grid > footer {
+    grid-column: main;
+    grid-row: footer;
+}
+
+.content-vert-center {
+    align-items: center;
+}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="container">
+
+
+    <div class="row center-align">
+        <h4>Tienen entre 25 y 35 años</h4>
+    </div>
+
+
+    <div class="row">
+    </div>
+
+
+    <div class="row">
+        <div class="col s12">
+            <table class="responsive-table highlight">
+                {% for persona in personas %}
+                <tr>
+                    <td>
+                        {{persona.nombre}}
+                    </td>
+                    <td>
+                        {{persona.apellido}}
+                    </td>
+                    <td>
+                        {{persona.fecha_nac}}
+                    </td>
+                    <td>
+                        {{persona.dni}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
